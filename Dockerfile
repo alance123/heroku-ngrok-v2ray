@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 ENV VER=4.20.0
 RUN apt update \
-        && apt install wget unzip -y \
+        && apt install wget neofetch unzip -y \
         && mkdir /v2raybin \ 
         && cd v2raybin \
         && wget -O v2ray.zip https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip \
