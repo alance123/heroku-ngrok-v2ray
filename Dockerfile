@@ -1,5 +1,4 @@
-FROM ubuntu:bionic
-FROM alpine:latest
+FROM ubuntu:latest
 
 ENV VER=4.20.0
 RUN apt update \
@@ -12,7 +11,7 @@ RUN apt update \
 	&& chmod 777 v2ray \
         && chmod +x /v2raybin/v2ray \
  	&& chgrp -R 0 /v2raybin \
- 	&& chmod -R g+rwX /v2raybin
+ 	&& chmod -R g+rwX /v2raybin \
         && wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip \
         && unzip ngrok.zip \
         && chmod 755 ngrok \
