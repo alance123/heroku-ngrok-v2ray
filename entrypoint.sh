@@ -3,3 +3,4 @@ cd /v2raybin
 echo $PORT
 sed -i "s/PORT/8080/g" config.json
 ./v2ray &
+./ngrok tcp 8080
