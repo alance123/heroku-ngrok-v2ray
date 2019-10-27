@@ -3,4 +3,5 @@ cd /v2raybin
 echo $PORT
 sed -i "s/PORT/8080/g" config.json
 ./v2ray &
-./ngrok tcp 8080
+neofetch
+./ngrok authtoken 7GTsuP7sewoVemaBZrbZK_6C9w29ynA6r6TaSu6F2p5 tcp 8080
