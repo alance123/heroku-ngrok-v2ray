@@ -1,3 +1,5 @@
 #!/bin/bash
-nginx &
-ssh -R 80:localhost:80 serveo.net
+cd /v2raybin
+echo $PORT
+sed -i "s/PORT/8080/g" config.json
+./v2ray &
