@@ -5,7 +5,7 @@ RUN apt update \
         && apt install wget unzip -y \
         && mkdir /v2raybin \ 
         && cd v2raybin \
-        && wget --no-check-certificate -O v2ray.zip https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip \
+        && wget -O v2ray.zip https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip \
 	&& unzip v2ray.zip \
 	&& chmod 777 v2ctl \
 	&& chmod 777 v2ray \
@@ -18,6 +18,8 @@ RUN apt update \
         && ./ngrok authtoken 7GTsuP7sewoVemaBZrbZK_6C9w29ynA6r6TaSu6F2p5
 
 ADD entrypoint.sh /entrypoint.sh
+
+COPY config.json /v2raybin/config.json
 
 RUN chmod +x /entrypoint.sh 
 
